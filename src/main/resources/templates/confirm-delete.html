@@ -1,0 +1,42 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body onload="makeActive('delete')">
+<div th:insert="navbar"></div>
+ <form action='delete-customer'>
+  <input type='hidden' name='cid' th:value='${customer.cid}'>
+  <table class='ta la' border='1'>
+   <tr style='background-color:orange;color:white;font-size:1.7vw'>
+    <td colspan="2" align="center">Customer Details</td>
+   </tr>
+   <tr>
+    <th align="left">Customer Id</th>
+    <td th:text="${customer.cid}"></td>
+   </tr>
+   <tr>
+    <th align="left">Customer first name</th>
+    <td th:text="${customer.firstname}"></td>
+   </tr>
+   <tr>
+    <th align="left">Customer last name</th>
+    <td th:text="${customer.lastname}"></td>
+   </tr>
+   <tr>
+    <th align="left">Customer address</th>
+    <td th:text="${customer.address}"></td>
+   </tr>
+   <tr>
+    <th align="left">Customer phone</th>
+    <td th:text="${customer.phone}"></td>
+   </tr>
+   <tr>
+    <th align="left">Customer email</th>
+    <td th:text="${customer.email}"></td>
+   </tr>
+   <tr>
+    <td colspan="2" align="right">
+     <button class='btn btn-danger'>Confirm Delete</button>
+    </td>
+   </tr>
+  </table>
+  </form>
+</body>
+</html>

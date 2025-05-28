@@ -1,0 +1,16 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body onload="makeActive('search')">
+<div th:insert="navbar"></div>
+ <form action='edit-record'>
+  <table class='tab'>
+   <tr>
+    <td class='la tdp'>Enter Customer id</td>
+    <td class='tdp'><input type='text' th:value='${cid}' name='cid' class='tb'></td>
+    <td class='tdp'><button class='btr'>Get Record</button></td>
+   </tr>
+  </table>
+  <div class='dvv'>
+   <label class='la' style='color:red' th:text="${msg}"></label>
+  </div>
+ </form> 
+</body>

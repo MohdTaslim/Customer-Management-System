@@ -1,0 +1,49 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body onload="makeActive('list')">
+<div th:insert="navbar"></div>
+<form action="update-record" method="post" th:object="${cust}" >
+ <div class='container'>
+  <div class='card col-md-10 mx-auto'>
+   <div class='card-body'>
+     <div class='row form-group'>
+      <div class='col-md-10'>
+        <label for='cid' class='la'>Customer id</label>
+        <input type='text' th:field="*{cid}" readonly="readonly" id='cid' name='cid' class='form-control' required>
+      </div>
+     </div> 
+     <div class='row form-group'>
+      <div class='col-md-5'>
+       <label for='firstname' class='la'>Edit first name</label>
+       <input type='text' th:field="*{firstname}" id='firstname'  class='form-control' required>
+      </div>
+      <div class='col-md-5'>
+       <label for='lastname' class='la'>Edit last name</label>
+       <input type='text' th:field="*{lastname}" id='lastname' class='form-control' required>
+      </div>
+     </div>
+     <div class='row form-group'>
+      <div class='col-md-5'>
+       <label for='address' class='la'>Edit address</label>
+       <input type='text'th:field="*{address}" id='address'  class='form-control' required>
+      </div>
+      <div class='col-md-5'>
+       <label for='phone' class='la'>Edit phone number</label>
+       <input type='text' th:field="*{phone}" id='phone'  class='form-control' required>
+      </div>
+     </div>
+     <div class='row form-group'>
+      <div class='col-md-10'>
+       <label for='email' class='la'>Edit email id</label>
+       <input type='text' th:field="*{email}" id='email' class='form-control' required>
+      </div>
+     </div>
+     <div class='row form-group'>
+      <div class='col-md-10'>
+       <button class='btn btn-secondary'>Update Record</button>
+      </div>
+     </div>
+   </div>
+  </div>
+ </div>
+ </form>
+</body>
